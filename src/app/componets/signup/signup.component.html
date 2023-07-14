@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="signup.component.css">
+  <title>Зареєструватись</title>
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="form-wrapper sign-up">
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+      <h2>Реєстрація</h2>
+      <div class="input-group">
+        <input type="text" formControlName="email" required>
+        <label for="">Електронна пошта</label>
+      </div>
+      <div class="input-group">
+        <input type="text" formControlName="userName" required>
+        <label for="">Логін</label>
+      </div>
+      <div class="input-group">
+        <input type="password" formControlName="password" required>
+        <label for="">Пароль</label>
+      </div>
+      <button type="submit">Зареєструватись</button>
+      <div class="signUp-link">
+      <p>Вже є акаунт? <a href="#" class="signUpBtn-link" routerLink="/login">Увійти</a></p>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="scriptL.js"></script>
+</body>
+</html>

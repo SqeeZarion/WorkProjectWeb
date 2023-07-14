@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+  <title>Title</title>
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="portfolio.component.css">
+</head>
+<body>
+
+<header class="header">
+  <a href="#" (click)="changeActiveLink($event, 'logo')" class="logo">¯\_(ツ)_/¯</a>
+
+  <i class='bx bx-menu' id="menu-icon"></i>
+
+  <nav class="navbar">
+    <a href="#" (click)="changeActiveLink($event, 'home')" class="active">Головна</a>
+    <a href="#" (click)="changeActiveLink($event, 'about')">Про мене</a>
+    <a href="#" (click)="changeActiveLink($event, 'services')">Послуги</a>
+    <a href="#" (click)="changeActiveLink($event, 'portfolio')">Портфоліо</a>
+    <a href="#" (click)="changeActiveLink($event, 'contact')">Контакти</a>
+  </nav>
+</header>
+
+
+<section class="home" id="home">
+  <div class="home-content">
+    <h3>Привіт, Це я</h3>
+    <h1>Petrukha Yura</h1>
+
+
+    <p>трохи про нас</p>
+    <div class="social-media">
+      <a href="#"><i class='bx bxl-telegram'></i></a>
+      <a href="https://github.com/SqeeZarion"><i class='bx bxl-github'></i></a>
+      <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+    </div>
+  </div>
+
+  <div class="home-img">
+    <img src="assets/portfolio/images/monster.png" alt="">
+  </div>
+</section>
+
+<!--    about section design-->
+<section class="about" id="about">
+  <div class="about-img">
+    <img src="assets/portfolio/images/about.png" alt="">
+  </div>
+
+  <div class="about-content">
+    <h2 class="heading">Про <span>мене</span></h2>
+    <h3 id="job-title">Frontend Developers!</h3>
+    <p id="project-description"></p>
+    <a href="#" (click)="changeActiveLink($event, '')" class="btn">Читати більше</a>
+  </div>
+
+</section>
+
+<!--    services section design-->
+
+<section class="services" id="services">
+  <h2 class="heading">Наші <span>Послуги</span></h2>
+
+  <div class="services-container">
+
+    <div class="services-box">
+      <i class='bx bx-code-alt'></i>
+      <h3>Web Development</h3>
+      <p></p>
+      <a href="#" class="btn">Читати більше</a>
+    </div>
+
+    <div class="services-box">
+      <i class='bx bxs-paint'></i>
+      <h3>.Net Core Devoleper</h3>
+      <p></p>
+      <a href="#" class="btn">Читати більше</a>
+    </div>
+
+  </div>
+</section>
+
+<!--    Portfolio section design-->
+<section class="portfolio" id="portfolio">
+  <h2 class="heading">Останні <span>Проекти</span></h2>
+
+  <div class="portfolio-container">
+    <div class="portfolio-box">
+      <img src="assets/portfolio/images/portfolio1.png" alt="">
+      <div class="portfolio-layer">
+        <h4>.Net</h4>
+        <p></p>
+        <a href="https://github.com/SqeeZarion/JarPCProject"><i class='bx bx-link-external'></i></a>
+      </div>
+    </div>
+
+<!--    <div class="portfolio-box">-->
+<!--      <img src="assets/portfolio/images/portfolio2.jpg" alt="">-->
+<!--      <div class="portfolio-layer">-->
+<!--        <h4>Web Design</h4>-->
+<!--        <p>Текст ...</p>-->
+<!--        <a href="#"><i class='bx bx-link-external'></i></a>-->
+<!--      </div>-->
+<!--    </div>-->
+
+    <div class="portfolio-box">
+      <img src="assets/portfolio/images/portfolio3.webp" alt="">
+      <div class="portfolio-layer">
+        <h4>Web Design</h4>
+        <p></p>
+        <a href="#"><i class='bx bx-link-external'></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Contact section design-->
+<section class="contact" id="contact">
+  <h2 class="heading">Зконтактуйте з <span>Мною!</span></h2>
+
+  <form [formGroup]="mainForm" (ngSubmit)="onSubmit()">
+    <div class="input-box">
+      <input type="text" placeholder="Логін" formControlName="Login" required>
+    </div>
+    <div class="input-box">
+      <input type="text" placeholder="Ім'я" formControlName="Name" required>
+    </div>
+    <textarea name="" id="" cols="30" rows="10" placeholder="Ваше Повідомлення" formControlName="MessageForMe" required></textarea>
+    <input type="submit" value="Надіслати Повідомлення" class="btn">
+  </form>
+</section>
+
+<!--Footer Design-->
+<footer class="footer">
+  <div class="footer-text">
+    <p>&copy; 2023 by SqeeZe | All Rights Reserved.</p>
+  </div>
+
+  <div class="footer-iconTop">
+    <a href="#" (click)="changeActiveLink($event, 'home')"><i class='bx bx-up-arrow-alt'></i></a>
+  </div>
+
+</footer>
+
+
+<!--==== scroll reveal ====-->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<!--typed js-->
+
+<script src="main.js"></script>
+</body>
+</html>

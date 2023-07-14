@@ -1,0 +1,51 @@
+html, body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #323946;
+}
+
+.portf-images {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: white;
+}
+
+.portf-images img {
+  margin-left: 120px;
+  margin-right: 120px;
+  width: 100%;
+  max-width: 270px;
+  margin-top: 60px;
+}
+
+.descr {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: white;
+  justify-items: center;
+}
+
+.descr p{
+  font-family: Arial;
+  font-size: 16px;
+  text-align: center;
+  width: 400px;
+}
+
+#p1, #p2{
+  opacity: 0;
+}
+
+#img1:hover, #img2:hover{
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+}
+
+
+#img1:hover + #p1, #img2:hover + #p2 {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
